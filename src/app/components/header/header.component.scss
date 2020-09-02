@@ -6,12 +6,6 @@
     left: 0;
     right: 0;
     z-index: 10;
-
-    // Keep title for SEO resons, but place it outside the user window
-    &__title {
-        position: absolute;
-        top: -9000px;
-    }
 }
 
 @include media-breakpoint-up(md) {
