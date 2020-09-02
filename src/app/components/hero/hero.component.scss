@@ -1,0 +1,23 @@
+@import '~src/styles.scss';
+
+.hero {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.page-title {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    background-color: $black-alpha-opacity;
+    color: $white;
+    font-size: 50px;
+    font-weight: $bold;
+    line-height: 58px;
+    padding: 0 16px;
+    text-align: center;
+    height: 100%;
+}
