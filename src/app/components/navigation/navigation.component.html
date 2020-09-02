@@ -1,0 +1,34 @@
+<nav class="navigation" [class.open]="isMobile && showMenu">
+    <ng-container *ngIf="showMenu">
+        <ul class="navigation__menu">
+            <li
+                *ngFor="let nav of navigation"
+                class="navigation__menu--element"
+            >
+                <a
+                    class="navigation__menu--element__link"
+                    [routerLink]="nav.link"
+                    [routerLinkActive]="['active']"
+                    (click)="isMobile ? showMenu = false : showMenu = true"
+                >
+                    <span class="navigation__menu--element__label">{{ nav.menuLabel }}</span>
+                </a>
+            </li>
+        </ul>
+    </ng-container>
+
+    <div
+        *ngIf="isMobile && !showMenu"
+        class="navigation__mobile-button"
+        (click)="toggleMobileMenu()"
+    >
+        Menu
+    </div>
+    <div
+        *ngIf="isMobile && showMenu"
+        class="navigation__mobile-button"
+        (click)="toggleMobileMenu()"
+    >
+        Close
+    </div>
+</nav>

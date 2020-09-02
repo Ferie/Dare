@@ -1,0 +1,89 @@
+@import '~src/styles.scss';
+
+.navigation {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    position: relative;
+    max-width: 960px;
+
+    &.open {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $menu-grey;
+    }
+
+    &__menu {
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(space-around);
+        @include flex-direction(column);
+        padding: 0;
+        text-align: center;
+        height: 70%;
+
+        &--element {
+            &__link {
+                @include user-select(none);
+                border-bottom: 2px solid $transparent;
+                color: $white;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: $bold;
+                letter-spacing: 0.73px;
+                line-height: 30px;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &.active {
+                    border-color: $white;
+                }
+            }
+        }
+    }
+
+    &__mobile-button {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background-color: $black-alpha-opacity;
+        border: 1px solid $white;
+        border-radius: $border-radius;
+        color: $white;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 24px;
+        margin-right: 16px;
+        padding: 10px 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .navigation {
+        display: block;
+        margin: 0 auto;
+        max-width: 960px;
+
+        &.open {
+            position: relative;
+            background-color: $transparent;
+        }
+
+
+        &__menu {
+            @include flex-direction(row);
+            padding: 20px 0;
+            height: auto;
+        }
+
+        &__mobile-button {
+            display: none;
+        }
+    }
+}
