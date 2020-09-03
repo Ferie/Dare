@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BrushesPageComponent } from './brushes-page.component';
+import { HeroComponent } from 'src/app/components/hero/hero.component';
 
 describe('BrushesPageComponent', () => {
     let component: BrushesPageComponent;
@@ -8,7 +9,10 @@ describe('BrushesPageComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [BrushesPageComponent]
+            declarations: [
+                BrushesPageComponent,
+                HeroComponent
+            ]
         })
             .compileComponents();
     }));
