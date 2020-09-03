@@ -29,7 +29,11 @@ import { HeroComponent } from './components/hero/hero.component';
         NavigationComponent,
         HeroComponent
     ],
-    imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule
+    ],
     providers: [],
     bootstrap: [AppComponent]
 })
