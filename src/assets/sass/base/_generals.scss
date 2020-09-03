@@ -4,4 +4,30 @@
     padding: 0 16px;
     margin: 32px auto;
     max-width: 960px;
+
+    &__content {
+        @include flexbox;
+        @include flex-direction(column);
+        @include justify-content(center);
+        height: 100%;
+
+        &--image {
+            width: 100%;
+        }
+
+        // Classes coming from remote content
+        &--paragraph {
+            margin-bottom: 12px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .mobile-spacer {
+        height: 32px;
+    }
 }
