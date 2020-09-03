@@ -20,12 +20,12 @@ export class NavigationComponent implements OnInit, OnDestroy {
     @Input() public navigation: Array<NavItem>;
     public isMobile: boolean = false;
     public showMenu: boolean = false;
-    private resizeObservable$: Observable<Event>;
-    private unsubscribe: Subject<any> = new Subject<any>();
+    private _resizeObservable$: Observable<Event>;
+    private _unsubscribe$: Subject<any> = new Subject<any>();
 
     constructor(private cdRef: ChangeDetectorRef) {
-        this.isMobile = window.innerWidth <= 768;
-        this.showMenu = window.innerWidth > 768;
+        this.isMobile = window && window.innerWidth <= 768;
+        this.showMenu = window && window.innerWidth > 768;
     }
 
     /**
@@ -33,12 +33,12 @@ export class NavigationComponent implements OnInit, OnDestroy {
      * resolutions menus.
      */
     public ngOnInit(): void {
-        this.resizeObservable$ = fromEvent(window, 'resize');
-        this.resizeObservable$.pipe(
-            takeUntil(this.unsubscribe)
+        this._resizeObservable$ = fromEvent(window, 'resize');
+        this._resizeObservable$.pipe(
+            takeUntil(this._unsubscribe$)
         ).subscribe(evt => {
-            this.isMobile = window.innerWidth <= 768;
-            this.showMenu = window.innerWidth > 768;
+            this.isMobile = window && window.innerWidth <= 768;
+            this.showMenu = window && window.innerWidth > 768;
             this.cdRef.detectChanges();
         });
     }
@@ -47,8 +47,8 @@ export class NavigationComponent implements OnInit, OnDestroy {
      * Destroy component and subscriptions.
      */
     public ngOnDestroy(): void {
-        this.unsubscribe.next();
-        this.unsubscribe.complete();
+        this._unsubscribe$.next();
+        this._unsubscribe$.complete();
     }
 
     public toggleMobileMenu() {
