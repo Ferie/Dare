@@ -1,6 +1,9 @@
 <section
     class="hero"
-    [ngStyle]="{ 'background-image': 'url(' + backgroundImage + ')' }"
+    [ngStyle]="{
+        'background-image': 'url(' + backgroundImage + ')',
+        'height': isMobile ? (fullPageHero ? '100%' : '50%') : '100%'
+    }"
 >
     <h1 class="page-title">
         {{ pageTitle }}
