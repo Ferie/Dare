@@ -4,5 +4,14 @@
 ></ra-hero>
 
 <main class="page">
-    blusher-page works!
+    <ra-accordion *ngIf="content && content.length > 0">
+        <ra-panel
+            *ngFor="let c of content"
+            [title]="c.title"
+            [opened]="c.opened" 
+            (toggle)="c.opened = !c.opened"
+        >
+            {{ c.body }}
+        </ra-panel>
+    </ra-accordion>
 </main>
