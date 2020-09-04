@@ -1,6 +1,23 @@
 {
     "home-page": {},
-    "blusher-page": {},
+    "blusher-page": [
+        {
+            "title": "The product and how it works",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum lacinia massa, a venenatis justo aliquet et. Curabitur vehicula iaculis lacus, ut hendrerit tortor posuere vitae. Duis tempus pellentesque efficitur. Sed eu euismod sapien. Nam ultrices, ipsum id rutrum posuere, risus lacus commodo lectus, quis eleifend lorem justo in risus. Sed et mi eu purus fringilla interdum. Donec et lacus nec nisi ullamcorper suscipit. Vivamus maximus viverra ligula nec fringilla. Sed nec turpis sed enim cursus luctus. Curabitur egestas nunc eu ante accumsan finibus. Cras non auctor lacus. Ut sit amet quam lacus. Ut tempor interdum enim, quis efficitur nibh bibendum vel."
+        },
+        {
+            "title": "Ordering",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum lacinia massa, a venenatis justo aliquet et. Curabitur vehicula iaculis lacus, ut hendrerit tortor posuere vitae. Duis tempus pellentesque efficitur. Sed eu euismod sapien. Nam ultrices, ipsum id rutrum posuere, risus lacus commodo lectus, quis eleifend lorem justo in risus. Sed et mi eu purus fringilla interdum. Donec et lacus nec nisi ullamcorper suscipit. Vivamus maximus viverra ligula nec fringilla. Sed nec turpis sed enim cursus luctus. Curabitur egestas nunc eu ante accumsan finibus. Cras non auctor lacus. Ut sit amet quam lacus. Ut tempor interdum enim, quis efficitur nibh bibendum vel."
+        },
+        {
+            "title": "Delivery",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum lacinia massa, a venenatis justo aliquet et. Curabitur vehicula iaculis lacus, ut hendrerit tortor posuere vitae. Duis tempus pellentesque efficitur. Sed eu euismod sapien. Nam ultrices, ipsum id rutrum posuere, risus lacus commodo lectus, quis eleifend lorem justo in risus. Sed et mi eu purus fringilla interdum. Donec et lacus nec nisi ullamcorper suscipit. Vivamus maximus viverra ligula nec fringilla. Sed nec turpis sed enim cursus luctus. Curabitur egestas nunc eu ante accumsan finibus. Cras non auctor lacus. Ut sit amet quam lacus. Ut tempor interdum enim, quis efficitur nibh bibendum vel."
+        },
+        {
+            "title": "Returns and refunds",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum lacinia massa, a venenatis justo aliquet et. Curabitur vehicula iaculis lacus, ut hendrerit tortor posuere vitae. Duis tempus pellentesque efficitur. Sed eu euismod sapien. Nam ultrices, ipsum id rutrum posuere, risus lacus commodo lectus, quis eleifend lorem justo in risus. Sed et mi eu purus fringilla interdum. Donec et lacus nec nisi ullamcorper suscipit. Vivamus maximus viverra ligula nec fringilla. Sed nec turpis sed enim cursus luctus. Curabitur egestas nunc eu ante accumsan finibus. Cras non auctor lacus. Ut sit amet quam lacus. Ut tempor interdum enim, quis efficitur nibh bibendum vel."
+        }
+    ],
     "brushes-page": {},
     "mascara-page": {
         "image": "assets/images/eye.jpg",
