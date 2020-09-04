@@ -1,0 +1,40 @@
+@import '~src/styles.scss';
+
+.panel {
+    position: relative;
+
+    &__heading {
+        border-bottom: 1px solid $lightening-grey;
+        font-size: 24px;
+        line-height: 28px;
+        padding: 20px 0;
+
+        &:after {
+            @include svg-icons('arrow');
+            position: absolute;
+            top: 24px;
+            right: 16px;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            content: ' ';
+            height: 16px;
+            width: 16px;
+
+            .opened & {
+                @include rotate(180deg);
+            }
+        }
+    }
+
+    &__body {
+        border-bottom: 2px solid $brown;
+        padding: 20px 0;
+        max-height: 0;
+
+        .opened & {
+            @include transition(max-height, .8s, ease-in);
+            transition-delay: .4s;
+            max-height: 2000px;
+        }
+    }
+}

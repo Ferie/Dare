@@ -1,0 +1,9 @@
+<article class="panel" [class.opened]="opened">
+    <header class="panel__heading" (click)="toggle.emit()">
+        {{ title }}
+    </header>
+
+    <div *ngIf="opened" class="panel__body">
+        <ng-content></ng-content>
+    </div>
+<article>
