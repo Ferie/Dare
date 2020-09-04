@@ -15,6 +15,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
+import { PanelComponent } from './components/panel/panel.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +29,9 @@ import { HeroComponent } from './components/hero/hero.component';
         HairPageComponent,
         HeaderComponent,
         NavigationComponent,
-        HeroComponent
+        HeroComponent,
+        AccordionComponent,
+        PanelComponent
     ],
     imports: [
         BrowserModule,
