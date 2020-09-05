@@ -44,7 +44,6 @@ export class AccordionComponent implements AfterContentInit, OnDestroy {
     }
 
     public openPanel(panel: PanelComponent) {
-        console.log('close panels');
         // close all panels
         this.panels.toArray().forEach(p => p.opened = false);
         // open the selected panel
