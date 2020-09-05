@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AccordionComponent } from './accordion.component';
+import { PanelComponent } from 'src/app/components/panel/panel.component';
 
 describe('AccordionComponent', () => {
     let component: AccordionComponent;
@@ -8,7 +8,10 @@ describe('AccordionComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [AccordionComponent]
+            declarations: [
+                AccordionComponent,
+                PanelComponent
+            ]
         })
             .compileComponents();
     }));

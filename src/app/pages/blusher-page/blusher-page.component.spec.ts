@@ -1,7 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BlusherPageComponent } from './blusher-page.component';
 import { HeroComponent } from 'src/app/components/hero/hero.component';
+import { AccordionComponent } from 'src/app/components/accordion/accordion.component';
+import { PanelComponent } from 'src/app/components/panel/panel.component';
 
 describe('BlusherPageComponent', () => {
     let component: BlusherPageComponent;
@@ -11,7 +12,9 @@ describe('BlusherPageComponent', () => {
         TestBed.configureTestingModule({
             declarations: [
                 BlusherPageComponent,
-                HeroComponent
+                HeroComponent,
+                AccordionComponent,
+                PanelComponent
             ]
         })
             .compileComponents();
