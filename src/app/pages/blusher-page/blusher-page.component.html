@@ -4,14 +4,14 @@
 ></ra-hero>
 
 <main class="page">
-    <ra-accordion *ngIf="content && content.length > 0">
+    <ra-accordion *ngIf="contentArray && contentArray.length > 0">
         <ra-panel
-            *ngFor="let c of content"
-            [title]="c.title"
-            [opened]="c.opened" 
-            (toggle)="c.opened = !c.opened"
+            *ngFor="let panel of contentArray"
+            [title]="panel.title"
+            [opened]="panel.opened" 
+            (toggle)="panel.opened = !panel.opened"
         >
-            {{ c.body }}
+            {{ panel.body }}
         </ra-panel>
     </ra-accordion>
 </main>

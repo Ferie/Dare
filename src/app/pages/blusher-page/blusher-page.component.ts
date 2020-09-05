@@ -14,7 +14,7 @@ import { take } from 'rxjs/operators';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BlusherPageComponent implements OnInit {
-    public content: Array<any>;
+    public contentArray: Array<any>;
 
     constructor(
         private contentService: ContentService,
@@ -25,7 +25,7 @@ export class BlusherPageComponent implements OnInit {
         this.contentService.getContent().pipe(
             take(1)
         ).subscribe((response: Response) => {
-            this.content = response['blusher-page'];
+            this.contentArray = response['blusher-page'];
             this.cdRef.detectChanges();
         });
     }
