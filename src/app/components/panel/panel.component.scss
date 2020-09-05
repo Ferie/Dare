@@ -5,12 +5,14 @@
 
     &__heading {
         border-bottom: 1px solid $lightening-grey;
+        cursor: pointer;
         font-size: 24px;
         line-height: 28px;
         padding: 20px 0;
 
         &:after {
             @include svg-icons('arrow');
+            @include transition(transform, .3s, ease);
             position: absolute;
             top: 24px;
             right: 16px;
@@ -22,19 +24,23 @@
 
             .opened & {
                 @include rotate(180deg);
+                @include transition(transform, .5s, ease-in);
             }
         }
     }
 
     &__body {
-        border-bottom: 2px solid $brown;
-        padding: 20px 0;
+        @include transition(all, .3s, ease);
+        border: none;
+        overflow: hidden;
+        padding: 0;
         max-height: 0;
 
-        .opened & {
-            @include transition(max-height, .8s, ease-in);
-            transition-delay: .4s;
+        &.active {
+            @include transition(all, .5s, ease-in);
+            border-bottom: 2px solid $brown;
             max-height: 2000px;
+            padding: 20px 0;
         }
     }
 }

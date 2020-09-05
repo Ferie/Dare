@@ -1,6 +1,5 @@
 import {
     Component,
-    ChangeDetectionStrategy,
     Input,
     Output,
     EventEmitter
@@ -9,11 +8,10 @@ import {
 @Component({
     selector: 'ra-panel',
     templateUrl: './panel.component.html',
-    styleUrls: ['./panel.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    styleUrls: ['./panel.component.scss']
 })
 export class PanelComponent {
-    @Input() opened = false;
-    @Input() title: string;
-    @Output() toggle: EventEmitter<any> = new EventEmitter<any>();
+    @Input() public title: string;
+    @Input() public opened = false;
+    @Output() public toggle: EventEmitter<any> = new EventEmitter<any>();
 }

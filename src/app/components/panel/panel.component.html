@@ -1,9 +1,12 @@
 <article class="panel" [class.opened]="opened">
-    <header class="panel__heading" (click)="toggle.emit()">
+    <header
+        class="panel__heading"
+        (click)="toggle.emit()"
+    >
         {{ title }}
     </header>
 
-    <div *ngIf="opened" class="panel__body">
+    <div class="panel__body" [class.active]="opened">
         <ng-content></ng-content>
     </div>
 <article>
