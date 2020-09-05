@@ -2,6 +2,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 // Page Components
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -36,7 +39,20 @@ import { PanelComponent } from './components/panel/panel.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        ReactiveFormsModule,
+        FormlyModule.forRoot({
+            extras: {
+                lazyRender: true
+            },
+            validationMessages: [
+                {
+                    name: 'required',
+                    message: 'This field is required'
+                }
+            ]
+        }),
+        FormlyBootstrapModule
     ],
     providers: [],
     bootstrap: [AppComponent]
