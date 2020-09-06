@@ -40,7 +40,7 @@ export class BrushesPageComponent {
             className: 'form__input',
             templateOptions: {
                 label: 'Phone Number',
-                placeholder: 'e.g. 07440 12346',
+                placeholder: 'e.g. 07440 123456',
                 required: true
             }
         },
