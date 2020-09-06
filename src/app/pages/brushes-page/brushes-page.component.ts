@@ -17,6 +17,7 @@ export class BrushesPageComponent {
         {
             key: 'fullName',
             type: 'input',
+            className: 'form__input',
             templateOptions: {
                 label: 'Full Name:',
                 placeholder: 'e.g. John Smith',
@@ -26,6 +27,7 @@ export class BrushesPageComponent {
         {
             key: 'email',
             type: 'input',
+            className: 'form__input',
             templateOptions: {
                 label: 'Email Address:',
                 placeholder: 'e.g. john.dove@email.com',
@@ -35,6 +37,7 @@ export class BrushesPageComponent {
         {
             key: 'phone',
             type: 'input',
+            className: 'form__input',
             templateOptions: {
                 label: 'Phone Number',
                 placeholder: 'e.g. 07440 12346',
@@ -44,15 +47,28 @@ export class BrushesPageComponent {
         {
             key: 'bithDate',
             type: 'input',
+            className: 'form__input',
             templateOptions: {
                 label: 'User Date of Birth:',
                 placeholder: 'e.g. 01/01/1970',
                 required: true
             }
         },
+        // {
+        //     key: 'date',
+        //     type: 'datepicker',
+        //     className: 'form__date-picker',
+        //     templateOptions: {
+        //         label: 'User Date of Birth:',
+        //         placeholder: 'e.g. 01/01/1970',
+        //         required: true
+        //     }
+        //     // parsers: [toDateParser]
+        // },
         {
             key: 'select',
             type: 'select',
+            className: 'form__select',
             templateOptions: {
                 label: 'Country',
                 placeholder: 'Select your country',
@@ -69,7 +85,8 @@ export class BrushesPageComponent {
         },
         {
             key: 'checkbox',
-            type: 'checkbox',
+            type: 'multicheckbox',
+            className: 'form__checkbox',
             templateOptions: {
                 label: 'Current products used:',
                 required: true,
@@ -85,6 +102,7 @@ export class BrushesPageComponent {
         {
             key: 'radio',
             type: 'radio',
+            className: 'form__radio',
             templateOptions: {
                 label: 'Approximately how oily is your skin?',
                 required: true,

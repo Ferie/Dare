@@ -1,1 +1,29 @@
 @import '~src/styles.scss';
+
+::ng-deep {
+    .form {
+        &__input,
+        &__select,
+        &__radio,
+        &__checkbox {
+            .form-group {
+                padding: 10px 0;
+            }
+
+            .invalid-feedback {
+                font-size: 12px;
+                color: $brown;
+            }
+        }
+    }
+}
+
+.button {
+    background-color: $brown;
+    border: 1px solid $brown;
+    border-radius: $border-radius;
+    color: $white;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 16px 32px;
+}
