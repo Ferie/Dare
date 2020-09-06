@@ -6,9 +6,9 @@ import {
     QueryList,
     OnDestroy
 } from '@angular/core';
-import { PanelComponent } from 'src/app/components/panel/panel.component';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { PanelComponent } from 'src/app/components/panel/panel.component';
 
 @Component({
     selector: 'ra-accordion',
@@ -25,12 +25,12 @@ export class AccordionComponent implements AfterContentInit, OnDestroy {
         this.panels.toArray()[0].opened = true;
         // Loop through all panels
         this.panels.toArray().forEach((panel: PanelComponent) => {
-            // subscribe panel toggle event
+            // Subscribe each panel to its own `toggle` event
             panel.toggle.pipe(
                 takeUntil(this._unsubscribe$)
             ).subscribe(() => {
-                // Open the panel
-                this.openPanel(panel);
+                // Toggle the panel
+                this.togglePanel(panel);
             });
         });
     }
@@ -43,10 +43,13 @@ export class AccordionComponent implements AfterContentInit, OnDestroy {
         this._unsubscribe$.complete();
     }
 
-    public openPanel(panel: PanelComponent) {
-        // close all panels
+    /**
+     * Close all the panels before opening the selected one
+     * @param panel: PanelComponent
+     */
+    public togglePanel(panel: PanelComponent): void {
+        const opened = panel.opened;
         this.panels.toArray().forEach(p => p.opened = false);
-        // open the selected panel
-        panel.opened = true;
+        panel.opened = !opened;
     }
 }

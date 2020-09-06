@@ -9,7 +9,6 @@
             *ngFor="let panel of contentArray"
             [title]="panel.title"
             [opened]="panel.opened" 
-            (toggle)="panel.opened = !panel.opened"
         >
             {{ panel.body }}
         </ra-panel>
