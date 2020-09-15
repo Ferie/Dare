@@ -11,24 +11,19 @@
                     [routerLinkActive]="['active']"
                     (click)="isMobile ? showMenu = false : showMenu = true"
                 >
-                    <span class="navigation__menu--element__label">{{ nav.menuLabel }}</span>
+                    <span class="navigation__menu--element__label">
+                        {{ nav.menuLabel }}
+                    </span>
                 </a>
             </li>
         </ul>
     </ng-container>
 
     <div
-        *ngIf="isMobile && !showMenu"
+        *ngIf="isMobile"
         class="navigation__mobile-button"
         (click)="toggleMobileMenu()"
     >
-        Menu
-    </div>
-    <div
-        *ngIf="isMobile && showMenu"
-        class="navigation__mobile-button"
-        (click)="toggleMobileMenu()"
-    >
-        Close
+        {{ showMenu ? 'Close' : 'Menu' }}
     </div>
 </nav>
