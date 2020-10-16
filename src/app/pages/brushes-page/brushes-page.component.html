@@ -4,5 +4,18 @@
 ></ra-hero>
 
 <main class="page">
-    brushes-page works!
+    <form
+        [formGroup]="form"
+        (ngSubmit)="onSubmit()"
+    >
+        <formly-form
+            [form]="form"
+            [model]="model"
+            [fields]="fields"
+        ></formly-form>
+    
+        <button type="submit" class="button">
+            Submit
+        </button>
+    </form>
 </main>
