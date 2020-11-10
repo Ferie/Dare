@@ -9,6 +9,7 @@
                     class="navigation__menu--element__link"
                     [routerLink]="nav.link"
                     [routerLinkActive]="['active']"
+                    [routerLinkActiveOptions]="{ exact: true }"
                     (click)="isMobile ? showMenu = false : showMenu = true"
                 >
                     <span class="navigation__menu--element__label">{{ nav.menuLabel }}</span>

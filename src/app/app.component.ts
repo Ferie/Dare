@@ -15,6 +15,11 @@ export class AppComponent {
     constructor() {
         this.navigationArray = [
             {
+                index: 0,
+                menuLabel: 'Home',
+                link: '/'
+            },
+            {
                 index: 1,
                 menuLabel: 'Blusher',
                 link: '/blusher'
